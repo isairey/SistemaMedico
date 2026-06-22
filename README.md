@@ -27,14 +27,14 @@ Se requieren dos módems USB (HSDPA Dongles):
 4. Se abrirá una ventana con varias pestañas
 5. Localiza el campo **Puerto (Port)**
 
-📌 Anota el número de puerto, ya que se deberá configurar en:  
+ Anota el número de puerto, ya que se deberá configurar en:  
 **Open MRM System → Tools → Modem Configurations**
 
 ---
 
-## ⚙️ Despliegue del Sistema
+##  Despliegue del Sistema
 
-### 🔐 Cambio de contraseña de MySQL (Opcional)
+###  Cambio de contraseña de MySQL (Opcional)
 
 > Por defecto, el sistema utiliza `"sa"` como contraseña del usuario `root`.
 
