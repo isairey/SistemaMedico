@@ -15,11 +15,11 @@ Se requieren dos módems USB (HSDPA Dongles):
 
 (01) Primer módem: para conexión a Internet.  
 (02) Segundo módem: para envío de SMS.  
-> ⚠️ No debe estar conectado a Internet. Cerrar cualquier software asociado (como Mobile Partner).
+> No debe estar conectado a Internet. Cerrar cualquier software asociado (como Mobile Partner).
 
 ---
 
-## 🔌 Identificación del Puerto del Módem SMS
+##  Identificación del Puerto del Módem SMS
 
 1. Haz clic derecho en **Mi PC / Este equipo**
 2. Selecciona **Administrar**
