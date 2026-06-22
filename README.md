@@ -89,13 +89,13 @@ Aplicar lo mismo si existe un JRE independiente.
 (02) SMSLib API
 (03) Rome XML Parser
 
-## 🛠️ Solución de Problemas
+##  Solución de Problemas
 
 Si ocurre un error como:
 ```
 Java.lang.ClassNotFoundException
 ```
-📌 Copiar los archivos JAR necesarios en las siguientes rutas y reiniciar la aplicación:
+ Copiar los archivos JAR necesarios en las siguientes rutas y reiniciar la aplicación:
 ```
 Linux
 /jre/lib
