@@ -229,6 +229,39 @@ Este proyecto se distribuye con fines educativos y de mantenimiento de sistemas 
 
 ---
 
+## 👨‍💻 Desarrollador
+
+<div align="center">
+
+### 🚀 Isai Reyes Peña
+
+**Ingeniero de Software | Desarrollador Full Stack | Arquitecto de Soluciones Web**
+
+Apasionado por el desarrollo de software, la construcción de aplicaciones escalables y el diseño de sistemas modernos. Especializado en el desarrollo de aplicaciones web, APIs, sistemas empresariales y soluciones tecnológicas orientadas al rendimiento y la automatización.
+
+💻 Desarrollo Full Stack
+⚙️ Backend y APIs REST
+🗄️ Bases de Datos SQL y NoSQL
+☁️ DevOps y Contenedores Docker
+🔗 Blockchain y Tecnologías Web3
+📱 Aplicaciones Web y Móviles
+
+---
+
+### 🌐 Contacto
+
+📧 **[isaireyes2003@gmail.com](mailto:isaireyes2003@gmail.com)**
+
+🐙 **GitHub:** https://github.com/isaireyesp1
+
+---
+
+> *"Construir soluciones simples, escalables y capaces de resolver problemas reales."*
+
+</div>
+
+---
+
 <div align="center">
 
 ### 📡 Open MRM System
