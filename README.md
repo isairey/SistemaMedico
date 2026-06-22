@@ -231,7 +231,7 @@ Este proyecto se distribuye con fines educativos y de mantenimiento de sistemas 
 
 ## 👨‍💻 Desarrollador
 
-<div align="center">
+
 
 ### 🚀 Isai Reyes Peña
 
@@ -258,7 +258,7 @@ Apasionado por el desarrollo de software, la construcción de aplicaciones escal
 
 > *"Construir soluciones simples, escalables y capaces de resolver problemas reales."*
 
-</div>
+
 
 ---
 
