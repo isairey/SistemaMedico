@@ -239,12 +239,12 @@ Este proyecto se distribuye con fines educativos y de mantenimiento de sistemas 
 
 Apasionado por el desarrollo de software, la construcción de aplicaciones escalables y el diseño de sistemas modernos. Especializado en el desarrollo de aplicaciones web, APIs, sistemas empresariales y soluciones tecnológicas orientadas al rendimiento y la automatización.
 
-💻 Desarrollo Full Stack
-⚙️ Backend y APIs REST
-🗄️ Bases de Datos SQL y NoSQL
-☁️ DevOps y Contenedores Docker
-🔗 Blockchain y Tecnologías Web3
-📱 Aplicaciones Web y Móviles
+- 💻 Desarrollo Full Stack
+- ⚙️ Backend y APIs REST
+- 🗄️ Bases de Datos SQL y NoSQL
+- ☁️ DevOps y Contenedores Docker
+- 🔗 Blockchain y Tecnologías Web3
+- 📱 Aplicaciones Web y Móviles
 
 ---
 
