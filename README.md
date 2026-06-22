@@ -47,7 +47,7 @@ mysql> update user set password=PASSWORD("sa") where User='root';
 mysql> flush privileges;
 mysql> quit;
 ```
-## 🗄️ Importación de la Base de Datos
+##  Importación de la Base de Datos
 Iniciar el servidor MySQL
 Importar el esquema de la base de datos:
 ```
@@ -58,8 +58,8 @@ Ejecutar el archivo principal:
 ```
 <project>/dist/OpenMRMSys.jar
 ```
-## 📡 Integración de SMS
-⚠️ Configuración externa para la JVM (Altamente recomendada)
+##  Integración de SMS
+ Configuración externa para la JVM (Altamente recomendada)
 
 Los archivos necesarios se encuentran en la carpeta <extras> del proyecto.
 
