@@ -76,14 +76,14 @@ Librerías (ej. win32com.dll o .so en Linux) → JDKDIR/jre/bin/
 ```
 Si tienes un JRE separado, repetir el proceso en el directorio JRE.
 
-## 📦 Instalación de RxTx
+##  Instalación de RxTx
 ```
 RXTXcomm.jar → JDKDIR/jre/lib/ext/
 Librerías necesarias (ej. librxtxSerial.so) → JDKDIR/jre/bin/
 ```
 Aplicar lo mismo si existe un JRE independiente.
 
-## 🧰 Herramientas de Terceros Utilizadas
+##  Herramientas de Terceros Utilizadas
 
 (01) Jasper Reporting
 (02) SMSLib API
