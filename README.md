@@ -204,7 +204,7 @@ Posteriormente reiniciar la aplicación.
 # 📂 Estructura del Proyecto
 
 ```text
-OpenMRM/
+SistemaMedico/
 │
 ├── dist/
 │   └── OpenMRMSys.jar
