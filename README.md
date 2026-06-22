@@ -2,14 +2,14 @@
    ##     Sistema Open MRM
 ---
 
-## 🧩 Software Requerido
+##  Software Requerido
 
 (01) Java 1.6  
 (02) MySQL Server 5.1  
 
 ---
 
-## 💻 Hardware Requerido
+##  Hardware Requerido
 
 Se requieren dos módems USB (HSDPA Dongles):
 
