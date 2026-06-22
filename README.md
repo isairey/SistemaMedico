@@ -63,12 +63,12 @@ Ejecutar el archivo principal:
 
 Los archivos necesarios se encuentran en la carpeta <extras> del proyecto.
 
-## 📌 Copiar estos archivos al classpath de Java
+##  Copiar estos archivos al classpath de Java
 Generalmente ubicado en:
 ```
 C:\Program Files\Java
 ```
-## 📦 Instalación de Java Comm
+##  Instalación de Java Comm
 ```
 comm.jar → JDKDIR/jre/lib/ext/
 javax.comm.properties → JDKDIR/jre/lib/
