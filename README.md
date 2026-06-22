@@ -1,103 +1,238 @@
+<div align="center">
 
-   ##     Sistema Open MRM
----
+# 🚀 Sistema Open MRM
 
-##  Software Requerido
+### 📡 Plataforma de Gestión y Monitoreo con Integración SMS
 
-(01) Java 1.6  
-(02) MySQL Server 5.1  
+Sistema desarrollado en Java para la administración, monitoreo y comunicación mediante mensajes SMS utilizando módems USB GSM/HSDPA.
 
----
+![Java](https://img.shields.io/badge/Java-1.6-orange?style=for-the-badge\&logo=java)
+![MySQL](https://img.shields.io/badge/MySQL-5.1-blue?style=for-the-badge\&logo=mysql)
+![SMSLib](https://img.shields.io/badge/SMSLib-API-success?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge)
 
-##  Hardware Requerido
-
-Se requieren dos módems USB (HSDPA Dongles):
-
-(01) Primer módem: para conexión a Internet.  
-(02) Segundo módem: para envío de SMS.  
-> No debe estar conectado a Internet. Cerrar cualquier software asociado (como Mobile Partner).
+</div>
 
 ---
 
-##  Identificación del Puerto del Módem SMS
+# 📋 Requisitos del Sistema
 
-1. Haz clic derecho en **Mi PC / Este equipo**
-2. Selecciona **Administrar**
-3. Busca la sección **Módems**
-4. Se abrirá una ventana con varias pestañas
-5. Localiza el campo **Puerto (Port)**
+## 💻 Software Requerido
 
- Anota el número de puerto, ya que se deberá configurar en:  
-**Open MRM System → Tools → Modem Configurations**
+| Software     | Versión |
+| ------------ | ------- |
+| Java JRE/JDK | 1.6     |
+| MySQL Server | 5.1     |
 
 ---
 
-##  Despliegue del Sistema
+## 🖥️ Hardware Requerido
 
-###  Cambio de contraseña de MySQL (Opcional)
+El sistema requiere dos módems USB GSM/HSDPA:
 
-> Por defecto, el sistema utiliza `"sa"` como contraseña del usuario `root`.
+| Dispositivo | Función             |
+| ----------- | ------------------- |
+| 📶 Módem 1  | Conexión a Internet |
+| 📩 Módem 2  | Envío de SMS        |
 
-Se recomienda cambiarla por seguridad:
+> ⚠️ El módem destinado al envío de SMS no debe estar conectado a Internet. Además, es recomendable cerrar cualquier software asociado al dispositivo (por ejemplo: Mobile Partner).
+
+---
+
+# 🔌 Configuración del Puerto del Módem SMS
+
+Antes de utilizar el sistema es necesario identificar el puerto COM asignado al módem SMS.
+
+### Pasos
+
+1. Abrir **Mi PC / Este Equipo**
+2. Clic derecho → **Administrar**
+3. Acceder a la sección **Módems**
+4. Seleccionar el dispositivo correspondiente
+5. Consultar el valor de **Puerto (COM)**
+
+### Configuración en Open MRM
+
+Una vez identificado el puerto:
+
+```text
+Open MRM System
+ └── Tools
+      └── Modem Configurations
+```
+
+Registrar el número de puerto correspondiente.
+
+---
+
+# 🗄️ Configuración de Base de Datos
+
+## Cambio de Contraseña de MySQL (Opcional)
+
+Por defecto, el sistema utiliza:
+
+```text
+Usuario: root
+Contraseña: sa
+```
+
+Para modificar la contraseña:
 
 ```sql
-start mysql server (o WAMP)
-mysql> use mysql;
-mysql> update user set password=PASSWORD("sa") where User='root';
-mysql> flush privileges;
-mysql> quit;
-```
-##  Importación de la Base de Datos
-Iniciar el servidor MySQL
-Importar el esquema de la base de datos:
-```
-mysql> source <ruta>/db_dump.sql
-```
-Desde la línea de comandos, ingresar a la carpeta del proyecto
-Ejecutar el archivo principal:
-```
-<project>/dist/OpenMRMSys.jar
-```
-##  Integración de SMS
- Configuración externa para la JVM (Altamente recomendada)
+USE mysql;
 
-Los archivos necesarios se encuentran en la carpeta <extras> del proyecto.
+UPDATE user
+SET password = PASSWORD('sa')
+WHERE User = 'root';
 
-##  Copiar estos archivos al classpath de Java
-Generalmente ubicado en:
+FLUSH PRIVILEGES;
+EXIT;
 ```
-C:\Program Files\Java
-```
-##  Instalación de Java Comm
-```
-comm.jar → JDKDIR/jre/lib/ext/
-javax.comm.properties → JDKDIR/jre/lib/
-Librerías (ej. win32com.dll o .so en Linux) → JDKDIR/jre/bin/
-```
-Si tienes un JRE separado, repetir el proceso en el directorio JRE.
 
-##  Instalación de RxTx
-```
-RXTXcomm.jar → JDKDIR/jre/lib/ext/
-Librerías necesarias (ej. librxtxSerial.so) → JDKDIR/jre/bin/
-```
-Aplicar lo mismo si existe un JRE independiente.
+---
 
-##  Herramientas de Terceros Utilizadas
+# 📥 Importación de la Base de Datos
 
-(01) Jasper Reporting
-(02) SMSLib API
-(03) Rome XML Parser
+Iniciar el servidor MySQL e importar el respaldo incluido.
 
-##  Solución de Problemas
+```sql
+SOURCE <ruta>/db_dump.sql;
+```
 
-Si ocurre un error como:
+---
+
+# ▶️ Ejecución del Sistema
+
+Desde la carpeta principal del proyecto ejecutar:
+
+```bash
+java -jar dist/OpenMRMSys.jar
 ```
-Java.lang.ClassNotFoundException
+
+O directamente abrir:
+
+```text
+dist/OpenMRMSys.jar
 ```
- Copiar los archivos JAR necesarios en las siguientes rutas y reiniciar la aplicación:
+
+---
+
+# 📲 Integración de SMS
+
+El sistema utiliza librerías externas para la comunicación serial con el módem GSM.
+
+## Componentes Necesarios
+
+Los archivos requeridos se encuentran en:
+
+```text
+/extras
 ```
+
+---
+
+# ☕ Instalación de Java Comm
+
+Copiar los siguientes archivos:
+
+```text
+comm.jar
+→ JDKDIR/jre/lib/ext/
+
+javax.comm.properties
+→ JDKDIR/jre/lib/
+
+win32com.dll / *.so
+→ JDKDIR/jre/bin/
+```
+
+> Si existe una instalación independiente del JRE, repetir el procedimiento.
+
+---
+
+# 🔄 Instalación de RxTx
+
+Copiar los siguientes archivos:
+
+```text
+RXTXcomm.jar
+→ JDKDIR/jre/lib/ext/
+
+librxtxSerial.so
+→ JDKDIR/jre/bin/
+```
+
+Aplicar la misma configuración al JRE si corresponde.
+
+---
+
+# 🧩 Dependencias de Terceros
+
+El proyecto utiliza las siguientes herramientas:
+
+| Herramienta     | Descripción            |
+| --------------- | ---------------------- |
+| Jasper Reports  | Generación de reportes |
+| SMSLib API      | Comunicación SMS       |
+| Rome XML Parser | Procesamiento XML      |
+
+---
+
+# 🛠️ Solución de Problemas
+
+## Error: ClassNotFoundException
+
+Si aparece un error similar a:
+
+```java
+java.lang.ClassNotFoundException
+```
+
+Verificar que todas las dependencias estén copiadas correctamente en:
+
+```text
 Linux
+
 /jre/lib
 /jre/lib/ext
 ```
+
+Posteriormente reiniciar la aplicación.
+
+---
+
+# 📂 Estructura del Proyecto
+
+```text
+OpenMRM/
+│
+├── dist/
+│   └── OpenMRMSys.jar
+│
+├── extras/
+│   ├── comm.jar
+│   ├── RXTXcomm.jar
+│   ├── javax.comm.properties
+│   └── librerías nativas
+│
+├── database/
+│   └── db_dump.sql
+│
+└── README.md
+```
+
+---
+
+# 📜 Licencia
+
+Este proyecto se distribuye con fines educativos y de mantenimiento de sistemas heredados basados en Java y comunicación SMS.
+
+---
+
+<div align="center">
+
+### 📡 Open MRM System
+
+Gestión • Monitoreo • Comunicación SMS
+
+</div>
